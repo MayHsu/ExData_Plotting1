@@ -7,4 +7,8 @@ png("plot3.png", width=480, height=480)
 plot(power_consumption_sub$Date_Time,as.numeric(power_consumption_sub$Sub_metering_1), type="l",xlab="", ylab="Energy Sub Metering")
 lines(power_consumption_sub$Date_Time,as.numeric(power_consumption_sub$Sub_metering_2), type="l",col="Red")
 lines(power_consumption_sub$Date_Time,as.numeric(power_consumption_sub$Sub_metering_3), type="l",col="Blue")
+
+legend("topright", col=c("black", "red", "blue"), lwd=c(1,1,1), 
+       c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+
 dev.off()
